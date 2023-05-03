@@ -1,0 +1,48 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Contact from '~/components/react/ContactForm';
+const meta = {
+  title: 'Kontakt - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- A tailwind css contact page - first column are contact infromation and the second columnt is a contact form -->
+  <section>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
+      <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-800 pb-20">Kontaktujte nás</h2>
+      <div class="grid lg:grid-cols-2 md:grid-cols-1">
+        <div class="col-span-1 text-left">
+          <h4 class="text-lg font-bold mb-4">Adresa</h4>
+          <p class="mb-2">
+            Gedeon Richter Marketing ČR, s.r.o. <br />
+            Na Strži 2097/63<br />
+            140 00 Praha 4
+          </p>
+          <p class="mb-2">
+            <a href="tel:+420261141200" class="text-blue-500 hover:text-blue-700 transition-colors">+420 261 141 200</a> <br />
+            <a href="tel:+420261141201" class="text-blue-500 hover:text-blue-700 transition-colors">+420 261 141 201</a> <br />
+            <a href="mailto:info@richtergedeon.cz" class="text-blue-500 hover:text-blue-700 transition-colors">info@richtergedeon.cz</a>
+          </p>
+          <p class="mb-2">
+            <strong class="font-bold">MEDICÍNSKÉ INFORMACE/ZÁZNAMNÍK:</strong><br />
+            <a href="tel:+420 234 076 575" class="text-blue-500 hover:text-blue-700 transition-colors">+420 234 076 575</a> <br />
+            <a href="tel:+420261141215" class="text-blue-500 hover:text-blue-700 transition-colors">+420 261 141 215</a> <br />
+            <a href="mailto:drugsafety.cz@gedeonrichter.eu" class="text-blue-500 hover:text-blue-700 transition-colors">drugsafety.cz@gedeonrichter.eu</a> <br />
+            Identifikační číslo: 24723720<br />
+            Sídlo: Praha 4 – Nusle, Na Strži 2097/63, PSČ 14000<br />
+            Spisová značka: C 168950 vedená u Městského soudu v Praze
+          </p>
+       
+        </div>
+        
+        <div class="col-span-1">
+          <Contact client:visible />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

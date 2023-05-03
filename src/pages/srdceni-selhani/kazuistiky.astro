@@ -1,0 +1,51 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import HCPPopup from "~/components/HCPPopup.astro"
+
+import RHZ from "~/assets/images/kazu_srd_selh_nahled.png";
+import { Image } from "@astrojs/image/components";
+import LatestPosts from "~/components/blog/LatestPosts.astro"
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+
+
+---
+<HCPPopup />
+<Layout {meta}>
+ <section class="w-full relative slanted py-28 overflow-hidden bg-transparent z-10 bg-[url('~/assets/images/srdceni_selhani_bg.png')] bg-no-repeat bg-contain">
+
+    <div class="mx-auto max-w-3xl grid xl:grid-cols-1 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1">
+        <h2 class="text-3xl md:text-2xl font-bold text-center text-gray-800 pb-20">Kazuistiky</h2>
+       
+      <a href="https://rgtests.cz/kazuistiky/Kazuistika-Verospiron_Dr-Scheinost_1_2021_email.pdf" class="col-span-1 text-center rounded-sm relative mx-auto z-30" target="_blank">
+        <Image 
+        src={RHZ}
+        width={300}
+        height={300}
+        alt="Srdeční selhání"
+        class="max-w-max max-h-max border shadow duration-700 transition-all cursor-pointer hover:-translate-y-5 z-40"
+      
+       />
+       <div class="text-sm absolute bottom-0 left-0 text-center w-full bg-gradient-to-br from-white via-white to-slate-100 py-2 shadow border font-bold text-lime-400">
+        <p>
+            <span class="text-green-800 text-left font-bold">KAZUISTIKA</span> <br>
+            PACIENTA S REZISTENTNÍ HYPERTENZÍ
+            LÉČENÉHO PŘÍPRAVKEM VEROSPIRON</p>
+       </div>
+      </a>
+    
+    </div>
+    
+ </section>
+ <section class="bg-gradient-to-br from-green-800 via-green-400 to-green-800 relative hover:from-green-400 hover:via-green-800 hover:to-green-400 transition-all duration-700 ease-in-out overflow-hidden z-0">
+  <div class="mx-auto max-w-7xl px-10">
+    <LatestPosts postIds={[""]}/>
+  </div>
+ 
+ </section>
+
+</Layout>

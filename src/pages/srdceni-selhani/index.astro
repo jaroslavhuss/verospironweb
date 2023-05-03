@@ -1,0 +1,63 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import {Image} from "@astrojs/image/components";
+import Girl from "~/assets/images/girl.png";
+
+const meta = {
+  title: 'Srdeční selhání - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- A tailwind css contact page - first column are contact infromation and the second columnt is a contact form -->
+  <section class="w-full bg-[url('~/assets/images/srdceni_selhani_bg.png')] bg-no-repeat bg-contain">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
+      <h1 class="text-3xl md:text-5xl font-bold text-center text-gray-800 pb-20">Srdeční selhání</h1>
+      <div class="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+        <div class="col-span-1 mx-auto items-center content-center lg:block xl:block md:block sm:hidden">
+            <Image 
+            width={250}
+            height={400}
+            src={Girl}
+            alt="Girl"
+            class="max-w-auto floating-image hover:scale-105 hidden  xl:block lg:block md:block sm:hidden"
+            />
+        </div>
+        <div class="col-span-1">
+            <h2 class="text-2xl md:text-2xl font-bold text-center text-gray-800 pb-20">Rozcestník</h2>
+            <ul>
+                <a href="/srdceni-selhani/kazuistiky"><li class="p-2 m-1 border rounded-sm shadow-sm font-bold hover:scale-105 transition-all duration-700 hover:bg-slate-100">Kazuistiky</li></a>
+                <li class="p-2 m-1 border rounded-sm shadow-sm font-bold hover:scale-105 transition-all duration-700 hover:bg-slate-100">Studie</li>
+                <li class="p-2 m-1 border rounded-sm shadow-sm font-bold hover:scale-105 transition-all duration-700 hover:bg-slate-100">Reprinty</li>
+                <li class="p-2 m-1 border rounded-sm shadow-sm font-bold hover:scale-105 transition-all duration-700 hover:bg-slate-100">Edukační videa</li>
+                <li class="p-2 m-1 border rounded-sm shadow-sm font-bold hover:scale-105 transition-all duration-700 hover:bg-slate-100">Kurzy</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+    .floating-image {
+  animation-name: float;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+</style>

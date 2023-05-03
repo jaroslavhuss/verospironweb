@@ -1,0 +1,47 @@
+---
+//Simple Popup on main page that shows up when user opens the page. This popup is mandatory for entering the webpage. The popup asks if the user is a Health Care Professional. If User is HCP, the popup will redirect to the HCP page. If the user is not HCP, the popup will redirect to the patient page.
+
+//The popup is a modal that is triggered by a button.
+//The modal is a div that is hidden by default. The modal is shown when the button is clicked.
+//The modal has two buttons, one for HCP and one for patient. The HCP button redirects to the HCP page. The patient button redirects to the patient page.
+
+---
+
+<div class="modal w-full h-full fixed flex content-center items-center justify-center bg-white z-50 bg-gradient-to-br from-white via-slate-50 to-slate-400">
+    <div class="modal-content max-w-3xl mx-auto">
+        <h2 class="text-3xl text-center font-bold text-black">Tato stránka je určena pouze medicínským odborníkům </h2>
+<p class="p-10 shadow text-black">Tato stránka je určená pouze odborníkům ve smyslu §2a Zákona č. 40/1995 Sb., o regulaci reklamy, ve znění pozdějších předpisů, čili osobám oprávněným předepisovat či vydávat léčivé přípravky.</p>
+<div class="w-full flex justify-between my-4">
+    <button class="hcp-button bg-green-600 p-4 border text-white font-bold cursor-pointer">Jsem Medcínský odborník</button>
+    <button class="patient-button hcp-button bg-blue-600 p-4 border text-white font-bold cursor-pointer">Jsem pacient</button>
+</div>
+        
+    </div>
+</div>
+
+<script>
+    window.onload = () =>{
+        const isHCP: string|null = localStorage.getItem('isHCP');
+        if(isHCP){
+            const modal = document.getElementsByClassName('modal')[0] as HTMLDivElement;
+            modal.style.display = "none";
+        }
+if(isHCP === null || isHCP === "false"){
+    const hcpButton = document.getElementsByClassName('hcp-button')[0] as HTMLButtonElement;
+    const patientButton = document.getElementsByClassName('patient-button')[0] as HTMLButtonElement;
+
+    hcpButton.addEventListener('click', () => {
+        console.log("Funguju!")
+        localStorage.setItem('isHCP', 'true');
+        window.location.reload();
+    });
+
+    patientButton.addEventListener('click', () => {
+        localStorage.setItem('isHCP', 'false');
+        document.getElementsByName("body")[0].innerHTML = "";
+        window.location.reload();
+    });
+}
+    }
+
+</script>

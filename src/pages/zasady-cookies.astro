@@ -1,0 +1,143 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Contact from '~/components/react/ContactForm';
+const meta = {
+  title: 'Zásady cookies - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- A tailwind css contact page - first column are contact infromation and the second columnt is a contact form -->
+  <section>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-4 text-md text-left font-medium">
+      <h2 class="text-3xl md:text-3xl font-bold text-center text-gray-800 pb-20">Zásady cookies</h2>
+      <p>
+        <em>
+            Tyto Zásady cookies byly naposledy aktualizovány 27. 4. 2023 a vztahují se na občany a osoby s trvalým pobytem v Evropském hospodářském prostoru.
+        </em>
+      </p>
+   
+      <h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">1. Úvod</h2>
+      <p>
+        Naše webové stránky {SITE.name} (dále jen „web“) používají cookies a další související technologie (pro usnadnění jsou všechny technologie označovány jako „cookies“). Cookies také vkládají třetí strany, které jsme zapojili. V níže uvedeném dokumentu vás informujeme o používání cookies na našem webu.
+      </p>
+
+      <h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">2. Co jsou soubory cookies?</h2>
+
+<p>Soubor cookie je malý jednoduchý soubor, který je odeslán spolu se stránkami tohoto webu a uložen prohlížečem na pevný disk počítače nebo jiného zařízení. Informace v nich uložené mohou být vráceny našim serverům nebo serverům příslušných třetích stran během následné návštěvy.</p>
+
+<h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">3. Co jsou skripty?</h2>
+<p>
+    Skript je část programového kódu, který slouží k tomu, aby naše webové stránky fungovaly správně a interaktivně. Tento kód je spuštěn na našem serveru nebo na vašem zařízení.
+</p>
+
+<h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">4. Co je to webový maják?</h2>
+<p>
+    Webový maják (nebo pixelová značka) je malý, neviditelný kus textu nebo obrázku na webu, který se používá ke sledování provozu na webu. Za tímto účelem jsou různá data o vás ukládána pomocí webových majáků.
+</p>
+
+<h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">5. Cookies</h2>
+<h3 class="text-lg md:text-xlg font-bold text-center text-gray-600 py-2">5.1 Technické nebo funkční soubory cookies</h3>
+
+<p>
+    Některé soubory cookies zajišťují, že určité části webu fungují správně a že vaše uživatelské preference zůstávají známé. Umístěním funkčních souborů cookies usnadňujeme návštěvu našich webových stránek. Tímto způsobem nemusíte při návštěvě našich webových stránek opakovaně zadávat stejné informace a například položky zůstanou v nákupním košíku, dokud nezaplatíte. Tyto cookies můžeme umístit bez vašeho souhlasu.
+</p>
+
+
+<p>
+    Statistické soubory cookies využíváme k optimalizaci webových stránek pro naše uživatele. Díky těmto statistickým cookies získáváme přehled o používání našich webových stránek. Žádáme vás o povolení k ukládání statistických souborů cookies.
+</p>
+
+<h3 class="text-lg md:text-xlg font-bold text-center text-gray-600 py-2">5.3 Marketingové/Sledovací cookies</h3>
+<p>
+    Marketingové/sledovací cookies jsou soubory cookies nebo jakákoli jiná forma místního úložiště, které se používají k vytváření uživatelských profilů k zobrazování reklamy nebo ke sledování uživatele na tomto webu nebo na několika webech pro podobné marketingové účely.
+</p>
+
+<h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">6. Umístěné cookies a souhlas
+</h2>
+<p class="text-center my-10"><a class="bg-gray-300 rounded p-2 m-2 border cursor-pointer text-lg" href="#" id="open_preferences_center">Aktualizovat své cookie preference nebo souhlas</a></p>
+
+<h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">7. Povolení/zakázání a odstranění cookies
+</h2>
+
+<p>
+    Pomocí internetového prohlížeče můžete automaticky nebo ručně mazat soubory cookies. Můžete také určit, že některé soubory cookies nemusí být umístěny. Další možností je změnit nastavení internetového prohlížeče tak, aby se vám při každém uložení souboru cookies zobrazila zpráva. Další informace o těchto možnostech naleznete v Nápovědě vašeho prohlížeče.
+</p>
+
+<p>
+    Vezměte prosím na vědomí, že náš web nemusí fungovat správně, pokud jsou deaktivovány všechny cookies. Pokud cookies smažete ve svém prohlížeči, budou znovu umístěny po vašem souhlasu, když znovu navštívíte naše webové stránky.
+</p>
+
+<h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">8. Vaše práva týkající se osobních údajů
+</h2>
+<p>
+<strong>Pokud jde o vaše osobní údaje, máte následující práva:</strong>
+<ul style="list-style-type:disc">
+    <li>
+        Máte právo vědět, proč jsou vaše osobní údaje potřebné, co se s nimi stane a jak dlouho budou uchovány.
+    </li>
+    <li>
+        Právo na přístup: Máte právo na přístup k vašim osobním údajům, které jsou nám známy.
+    </li>
+    <li>
+        Právo na opravu: Máte právo doplnit, opravit, odstranit nebo zablokovat vaše osobní údaje, kdykoli budete chtít.
+
+    </li>
+    <li>
+        Pokud nám udělíte souhlas se zpracováním vašich údajů, máte právo tento souhlas odvolat a nechat vaše osobní údaje smazat.
+    </li>
+<li>
+    Právo na přenos vašich údajů: Máte právo vyžádat si od správce všechny vaše osobní údaje a v celém rozsahu je předat jinému správci.
+</li>
+
+<li>
+    Právo na námitku: proti zpracování vašich údajů můžete namítat. Řídíme se tím, pokud neexistují oprávněné důvody ke zpracování.
+</li>
+
+<li>
+    Pro uplatnění těchto práv nás prosím kontaktujte. Kontaktní údaje najdete ve spodní části těchto Zásad používání souborů cookies. Máte-li stížnost na to, jak nakládáme s vašimi údaji, rádi bychom se o tom dozvěděli, ale máte také právo podat stížnost kontrolnímu orgánu (Úřadu pro ochranu osobních údajů).
+</li>
+</ul>
+</p>
+
+<h2 class="text-xl md:text-xl font-bold text-center text-gray-800 py-3">10. Kontaktní údaje</h2>
+
+<p>V případě dotazů nebo komentářů ohledně našich zásad týkajících se souborů cookies a tohoto prohlášení nás prosím kontaktujte pomocí následujících kontaktních údajů:</p>
+
+
+<div class="col-span-1 text-left">
+    <h4 class="text-lg font-bold mb-4">Adresa</h4>
+    <p class="mb-2">
+      Gedeon Richter Marketing ČR, s.r.o. <br />
+      Na Strži 65<br />
+      140 00 Praha 4
+    </p>
+    <p class="mb-2">
+      <a href="tel:+420261141200" class="text-blue-500 hover:text-blue-700 transition-colors">+420 261 141 200</a> <br />
+      <a href="tel:+420261141201" class="text-blue-500 hover:text-blue-700 transition-colors">+420 261 141 201</a> <br />
+      <a href="mailto:info@richtergedeon.cz" class="text-blue-500 hover:text-blue-700 transition-colors">info@richtergedeon.cz</a>
+    </p>
+    <p class="mb-2">
+      <strong class="font-bold">MEDICÍNSKÉ INFORMACE/ZÁZNAMNÍK:</strong><br />
+      <a href="tel:+420 234 076 575" class="text-blue-500 hover:text-blue-700 transition-colors">+420 234 076 575</a> <br />
+      <a href="tel:+420261141215" class="text-blue-500 hover:text-blue-700 transition-colors">+420 261 141 215</a> <br />
+      <a href="mailto:drugsafety.cz@gedeonrichter.eu" class="text-blue-500 hover:text-blue-700 transition-colors">drugsafety.cz@gedeonrichter.eu</a> <br />
+      Identifikační číslo: 24723720<br />
+      Sídlo: Praha 4 – Nusle, Na Strži 2097/63, PSČ 14000<br />
+      Spisová značka: C 168950 vedená u Městského soudu v Praze
+    </p>
+    <p class="mb-2">
+      <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors">Právní minimum {'>>'}</a>
+    </p>
+<p class="my-10">
+    Tyto Zásady cookies byly synchronizovány s cookiedatabase.org dne 27. 4. 2023
+</p>
+</div>
+
+     <Contact client:visible/>
+    </div>
+  </section>
+</Layout>

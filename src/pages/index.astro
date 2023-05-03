@@ -1,0 +1,83 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import HCPPopup from "~/components/HCPPopup.astro"
+
+import RHZ from "~/assets/images/rhp2.png";
+import SS from "~/assets/images/srdceni_selhani2.png"
+import BG1 from "~/assets/images/bg_1.png"
+import BG2 from "~/assets/images/bg_2.png"
+import { Image } from "@astrojs/image/components";
+import LatestPosts from "~/components/blog/LatestPosts.astro"
+import CustomTypeWriter from '~/components/react/CustomTypeWriter';
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+
+
+---
+<HCPPopup />
+<Layout {meta}>
+ <section class="w-full relative slanted py-28 overflow-hidden bg-transparent z-10">
+
+  <!--  -->
+
+    <div class="mx-auto max-w-3xl grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
+      <Image 
+      src={BG2}
+      width={500}
+      height={500}
+      alt="rezistentní hypertenze"
+      class="max-w-max max-h-max absolute top-30 left-0 opacity-5 hover:opacity-75 transition-all duration-700 hover:scale-105 -rotate-12 z-20"
+  
+     />
+
+     <Image 
+        src={BG1}
+        width={500}
+        height={800}
+        alt="rezistentní hypertenze"
+        class="max-w-max max-h-max absolute top-20 right-0 opacity-5 z-20 hover:opacity-75 transition-all duration-700 hover:scale-105 rotate-12"
+  
+       />
+      <a href="/srdceni-selhani" class="col-span-1 text-center rounded-sm relative mx-auto z-30">
+        <Image 
+        src={RHZ}
+        width={300}
+        height={300}
+        alt="Srdeční selhání"
+        class="max-w-max max-h-max border shadow duration-700 transition-all cursor-pointer hover:scale-105 hover:-translate-y-5 z-40"
+        style="border-radius:100%"
+       />
+       <div class="text-sm absolute bottom-0 left-0 text-center w-full bg-gradient-to-br from-white via-white to-slate-100 py-2 shadow border font-bold">
+        <p>SRDEČNÍ SELHÁNÍ</p>
+       </div>
+      </a>
+      <div class="col-span-1 absolute bottom-10 left-0 w-full text-center z-50 font-bold text-lg text-slate-400 sm:hidden lg:block md:block xl:block"><CustomTypeWriter client:visible/></div>
+      
+      <a href="/rezistentni-hypertenze" class="col-span-1 text-center rounded-sm relative mx-auto z-30">
+        <Image 
+        src={SS}
+        width={300}
+        height={300}
+        alt="rezistentní hypertenze"
+        class="max-w-max max-h-max border shadow duration-700 transition-all cursor-pointer hover:scale-105 hover:-translate-y-5 z-40"
+        style="border-radius:100%"
+       />
+       <div class="text-lg absolute bottom-0 left-0 text-center w-full bg-gradient-to-br from-white via-white to-slate-100 py-2 shadow border font-bold">
+        <p class="text-sm">REZISTENTNÍ HYPERTENZE</p>
+       </div>
+      </a>
+    </div>
+    
+ </section>
+ <section class="bg-gradient-to-br from-green-800 via-green-400 to-green-800 relative hover:from-green-400 hover:via-green-800 hover:to-green-400 transition-all duration-700 ease-in-out overflow-hidden z-0">
+  <div class="mx-auto max-w-7xl px-10">
+    <LatestPosts postIds={[""]}/>
+  </div>
+ 
+ </section>
+
+</Layout>
