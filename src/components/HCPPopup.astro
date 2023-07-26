@@ -1,19 +1,26 @@
 ---
-//Simple Popup on main page that shows up when user opens the page. This popup is mandatory for entering the webpage. The popup asks if the user is a Health Care Professional. If User is HCP, the popup will redirect to the HCP page. If the user is not HCP, the popup will redirect to the patient page.
-
-//The popup is a modal that is triggered by a button.
-//The modal is a div that is hidden by default. The modal is shown when the button is clicked.
-//The modal has two buttons, one for HCP and one for patient. The HCP button redirects to the HCP page. The patient button redirects to the patient page.
-
 ---
 
-<div class="modal w-full h-full fixed flex content-center items-center justify-center bg-white z-50 bg-gradient-to-br from-white via-slate-50 to-slate-400">
-    <div class="modal-content max-w-3xl mx-auto">
+<div class="modal flex content-center items-center justify-center bg-white bg-gradient-to-br from-white via-slate-50 to-slate-400 overflow-visible fixed z-50 top-0 left w-full h-full overscroll-none">
+    <div class="modal-content max-w-3xl mx-auto overflow-scroll z-50 bg-white max-h-screen p-5 xl:p-20 lg:p-20 md:p-10">
         <h2 class="text-3xl text-center font-bold text-black">Tato stránka je určena pouze medicínským odborníkům </h2>
-<p class="p-10 shadow text-black">Tato stránka je určená pouze odborníkům ve smyslu §2a Zákona č. 40/1995 Sb., o regulaci reklamy, ve znění pozdějších předpisů, čili osobám oprávněným předepisovat či vydávat léčivé přípravky.</p>
+<p class="p-10 shadow text-black">„Následující stránky a informace jsou určeny výhradně odborníkům, tedy osobám oprávněným léčivé přípravky předepisovat, nebo vydávat (definice odborníka podle § 2a zákona č. 40/1995 Sb., o regulaci reklamy, v platném znění). V případě, že tomu tak není, je si tato vstupující osoba vědoma rizik spojených s chybným vyhodnocením tvrzení uvedených v reklamě
+<br>
+<br>
+    1) „Kliknutím na tlačítko ANO (pokračovat) výslovně prohlašuji a potvrzuji, že jsem odborníkem, tedy osobou oprávněnou léčivé přípravy vydávat či předepisovat. V případě, že nepatříte mezi osoby oprávněné léčivé přípravky předepisovat, nebo vydávat, opusťte prosím tyto stránky stisknutím tlačítka NE."
+    <br>
+<br>
+    2) „Kliknutím na tlačítko ANO (pokračovat) výslovně prohlašuji a potvrzuji, že je mi známa definice odborníka. V případě, že nikoliv nebo v případě, že nepatříte mezi osoby oprávněné léčivé přípravky předepisovat, nebo vydávat, opusťte prosím tyto stránky stisknutím tlačítka NE."
+    <br>
+<br>
+    3) Pro případ, že nejsem odborníkem, pak jsem seznámen s riziky, kterým se vystavuji v důsledku možného chybného vyhodnocení informací, které jsou určeny odborníkům, přičemž tato rizika zcela akceptuji.
+    <br>
+<br>
+    Přejete-li si pokračovat a tím potvrdit, že jste tímto odborníkem, stiskněte ANO.“</p>
 <div class="w-full flex justify-between my-4">
-    <button class="hcp-button bg-green-600 p-4 border text-white font-bold cursor-pointer">Jsem Medcínský odborník</button>
-    <button class="patient-button hcp-button bg-blue-600 p-4 border text-white font-bold cursor-pointer">Jsem pacient</button>
+   
+    <button class="patient-button bg-blue-600 p-4 border text-white font-bold cursor-pointer">Jsem pacient</button>
+    <button class="hcp-button bg-green-600 p-4 border text-white font-bold cursor-pointer">ANO - jsem odborníkům</button>
 </div>
         
     </div>
@@ -31,7 +38,6 @@ if(isHCP === null || isHCP === "false"){
     const patientButton = document.getElementsByClassName('patient-button')[0] as HTMLButtonElement;
 
     hcpButton.addEventListener('click', () => {
-        console.log("Funguju!")
         localStorage.setItem('isHCP', 'true');
         window.location.reload();
     });

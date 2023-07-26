@@ -14,6 +14,22 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        float: {
+          '0%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+          '100%': { transform: 'translateY(0px)' },
+        },
+      },
+      animation: {
+        floating: 'float 3s ease-in-out infinite',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      // Add the group-hover variant to the animationName utility
+      animationName: ['group-hover'],
     },
   },
   plugins: [require('@tailwindcss/typography')],

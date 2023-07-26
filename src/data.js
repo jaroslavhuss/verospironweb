@@ -7,32 +7,12 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
-      text: 'Srdeční selhání',
-      links: [
-        {
-          text: 'Kazuistiky',
-          href: "/srdceni-selhani/kazuistiky",
-        },
-        {
-          text: 'Studie',
-          href: "#",
-        },
-        {
-          text: 'Reprinty',
-          href: "#",
-        },
-        {
-          text: 'Edukační videa',
-          href: "#",
-        },
-        {
-          text: 'Kurzy',
-          href: "#",
-        },
-      ],
+      text: 'Aktuality',
+      href: getBlogPermalink(),
     },
     {
       text: 'Rezistentní hypertenze',
+      href: "/rezistentni-hypertenze",
       links: [
         {
           text: 'Kazuistiky',
@@ -57,8 +37,30 @@ export const headerData = {
       ],
     },
     {
-      text: 'Články',
-      href: getBlogPermalink(),
+      text: 'Srdeční selhání',
+      href: "/srdecni-selhani",
+      links: [
+        {
+          text: 'Kazuistiky',
+          href: "/srdecni-selhani/kazuistiky",
+        },
+        {
+          text: 'Studie',
+          href: "#",
+        },
+        {
+          text: 'Reprinty',
+          href: "#",
+        },
+        {
+          text: 'Edukační videa',
+          href: "#",
+        },
+        {
+          text: 'Kurzy',
+          href: "#",
+        },
+      ],
     },
     {
       text: 'Kontakt',
@@ -72,15 +74,7 @@ export const headerData = {
   
 export const footerData = {
   links: [
-    {
-      title: 'Kontakt',
-      links: [
-        {
-          text: 'Kontakt',
-          href: "/kontakt",
-        },
-      ],
-    },
+  
     {
       title: 'Srdeční selhání',
       links: [
@@ -131,7 +125,15 @@ export const footerData = {
         },
       ],
     },
-    
+    {
+      title: 'Kontakt',
+      links: [
+        {
+          text: 'Kontakt',
+          href: "/kontakt",
+        },
+      ],
+    },
   ],
   secondaryLinks: [
     { text: 'Podmínky použití', href: getPermalink('/zasady-cookies') },

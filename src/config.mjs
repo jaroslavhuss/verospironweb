@@ -38,7 +38,7 @@ const CONFIG = {
     },
 
     list: {
-      pathname: 'clanky', // Blog main path, you can change this to "articles" (/articles)
+      pathname: 'aktuality', // Blog main path, you can change this to "articles" (/articles)
       noindex: false,
       disabled: false,
     },

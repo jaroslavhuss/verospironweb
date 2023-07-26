@@ -4,6 +4,7 @@ import { SITE } from '~/config.mjs';
 import { getHomePermalink } from '~/utils/permalinks';
 import { Image } from "@astrojs/image/components";
 import LogoRG from "~/assets/images/gedeon_richter_cz_logo_official.png"
+import HCPPopup from '../HCPPopup.astro';
 interface Link {
   text?: string;
   href?: string;
@@ -30,6 +31,9 @@ const { socialLinks = [], secondaryLinks = [], links = [], theme = 'light' } = A
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800']}>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
+    <div class="py-3 font-bold">
+        Souhrn údajů o přípravku:
+    </div>
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
@@ -70,6 +74,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], theme = 'light' } = A
         ))
       }
     </div>
+
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
       <p><a class="bg-gray-300 rounded p-2 m-2 border cursor-pointer text-xs" href="#" id="open_preferences_center">Aktualizovat své cookie preference!</a></p>
     </div>
@@ -102,14 +107,15 @@ const { socialLinks = [], secondaryLinks = [], links = [], theme = 'light' } = A
         )
       }
 
-      <div class="text-sm mr-4 dark:text-slate-400 grid grid-cols-2 items-center content-center">
+      <div class="text-sm mr-4 text-slate-400 grid grid-cols-2 items-center content-center">
       <Image 
         alt="Gedeon Richter"
         src={LogoRG}
         width={300}
         height={40}
-      /> <span class="text-xl">{new Date().getFullYear()}</span>
+      /> <span class="text-lg text-grey">{new Date().getFullYear()}</span>
       </div>
     </div>
   </div>
+  <HCPPopup />
 </footer>

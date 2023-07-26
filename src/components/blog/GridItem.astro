@@ -36,6 +36,9 @@ const image = await findImage(post.image);
       )
     }
   </div>
+  <span class="bg-white inline-block p-1 mx-1 rounded-md text-md">
+    {post.publishDate.toLocaleDateString()}
+  </span>
   <h3 class="mb-2 text-xl font-bold leading-tight sm:text-2xl font-heading">
     {
       BLOG?.post?.disabled ? (
