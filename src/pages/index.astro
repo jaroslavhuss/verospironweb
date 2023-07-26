@@ -3,7 +3,7 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 import RHZ from "~/assets/images/rhp2.png";
 import SS from "~/assets/images/srdceni_selhani2.png"
-import BG1 from "~/assets/images/bg_1.png"
+import BG1 from "~/assets/images/bg_3.png"
 import BG2 from "~/assets/images/bg_2.png"
 import { Image } from "@astrojs/image/components";
 import LatestPosts from "~/components/blog/LatestPosts.astro"
@@ -24,11 +24,11 @@ const meta = {
       
       <a href="/rezistentni-hypertenze" class="col-span-1 text-center rounded-sm mx-auto z-30 group relative">
         <Image 
-        src={BG1}
+        src={BG2}
         width={500}
-        height={800}
+        height={500}
         alt="rezistentní hypertenze"
-        class="max-w-max max-h-max absolute opacity-5 -top-32 group-hover:opacity-30 transition-all group-hover:scale-105 z-0 duration-1000 -left-20 group-hover:-left-80 group-hover:animate-floating hidden xl:block lg:block"
+        class="max-w-max max-h-max absolute opacity-5 -top-10 group-hover:opacity-30 transition-all group-hover:scale-105 z-0 duration-1000 -left-20 group-hover:-left-80 group-hover:animate-floating hidden xl:block lg:block"
       
        />      
         <Image 
@@ -45,14 +45,14 @@ const meta = {
       </a>
     
       
-      <a href="/srdecni-selhani" class="col-span-1 text-center rounded-sm relative mx-auto z-30 group">
+      <a href="/srdecni-selhani" class="col-span-1 text-center rounded-sm mx-auto z-30 group relative">
 
  <Image 
- src={BG2}
+ src={BG1}
  width={500}
- height={500}
+ height={800}
  alt="Srdeční selhání"
- class="max-w-max max-h-max absolute -top-0 -right-20 opacity-5 z-0 group-hover:opacity-30 transition-all duration-1000 group-hover:scale-105 group-hover:-right-80 group-hover:animate-floating hidden xl:block lg:block"
+ class="max-w-max max-h-max absolute -top-40 -right-20 opacity-5 z-0 group-hover:opacity-30 transition-all duration-1000 group-hover:scale-105 group-hover:-right-80 group-hover:animate-floating hidden xl:block lg:block"
 
 />
         <Image 
